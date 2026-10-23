@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import { currentStreak, longestStreak, completionRate, weekDates, localDateString } from './streaks.js';
+const today = '2026-10-24';
+assert.equal(currentStreak(['2026-10-22', '2026-10-23', today], today), 3);
+assert.equal(currentStreak(['2026-10-22', '2026-10-23'], today), 2);
+assert.equal(currentStreak([], today), 0);
+assert.equal(longestStreak(['2026-10-01', '2026-10-02', '2026-10-04', '2026-10-05', '2026-10-06']), 3);
+assert.equal(completionRate([today, '2026-10-23'], today, 4), 50);
+assert.equal(weekDates(today).length, 7);
+assert.equal(weekDates(today)[5], today);
+assert.match(localDateString(new Date(2026, 9, 24)), /^2026-10-24$/);
+console.log('streak utilities: all checks passed');

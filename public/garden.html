@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FAF6EC"><meta name="description" content="Tend your habits gently and watch them grow with Rootine.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%B1%3C/text%3E%3C/svg%3E">
+  <title>My Garden — Rootine</title>
+  <script>(function(){try{const saved=localStorage.getItem('rootine-theme');document.documentElement.dataset.theme=saved||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}catch{}})()</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="/js/curtain-boot.js"></script>
+  <link rel="stylesheet" href="/css/base.css"><link rel="stylesheet" href="/css/components.css"><link rel="stylesheet" href="/css/animations.css"><link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="shell">
+    <section class="welcome"><div><p class="eyebrow">YOUR LITTLE GARDEN</p><h1 id="greeting">Good morning 🌱</h1><p class="welcome-copy">Small steps, tended with care, become something lovely.</p></div><div class="daily-progress" aria-label="Today's progress"><div class="progress-ring" id="progress-ring"><div><strong id="progress-count">0 of 0</strong><span>tended today</span></div></div></div></section>
+    <div class="toolbar"><div><h2>Your habits</h2><p class="section-subtitle" id="garden-caption">A little care goes a long way.</p></div><div class="toolbar-actions"><div class="filters" role="group" aria-label="Filter habits"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="done">Done today</button><button class="filter" data-filter="pending">Pending</button></div><button class="button button-primary add-desktop" id="add-habit">＋ <span>New habit</span></button></div></div>
+    <section id="garden" class="garden" aria-live="polite"><div class="skeleton-card"></div><div class="skeleton-card"></div><div class="skeleton-card"></div></section>
+    <section class="celebration hidden" id="celebration" role="status"><span>🌼</span><div><strong>Your garden is glowing!</strong><p>You showed up for everything today. Take a moment to enjoy it.</p></div></section>
+  </main>
+  <button class="fab" id="add-fab" aria-label="Plant a new habit">＋</button>
+  <div id="modal-root"></div><div id="toast-root" aria-live="polite" aria-atomic="true"></div><div id="site-footer"></div>
+  <script type="module" src="/js/main.js"></script>
+</body></html>

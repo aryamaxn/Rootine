@@ -1,0 +1,10 @@
+import { Router } from 'express';
+import { listHabits, createHabit, updateHabit, deleteHabit, toggleHabit } from '../controllers/habitController.js';
+const router = Router();
+const asyncRoute = fn => (req, res, next) => Promise.resolve(fn(req, res, next)).catch(next);
+router.get('/', asyncRoute(listHabits));
+router.post('/', asyncRoute(createHabit));
+router.put('/:id', asyncRoute(updateHabit));
+router.delete('/:id', asyncRoute(deleteHabit));
+router.patch('/:id/toggle', asyncRoute(toggleHabit));
+export default router;

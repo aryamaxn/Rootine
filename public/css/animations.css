@@ -1,0 +1,13 @@
+@keyframes shimmer{to{background-position:-150% 0}}@keyframes fade{from{opacity:0}to{opacity:1}}@keyframes rise{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}@keyframes pop{0%{transform:scale(.78)}65%{transform:scale(1.13)}100%{transform:scale(1)}}@keyframes sprout{from{transform:translateY(4px) scale(.88);opacity:.65}to{transform:translateY(0) scale(1);opacity:1}}@keyframes ripple{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--primary),transparent 48%)}100%{box-shadow:0 0 0 13px transparent}}.check-button.just-toggled{animation:pop .34s ease-out}.check-button.just-toggled:after{content:"";position:absolute;inset:0;border-radius:inherit;animation:ripple .55s ease-out;pointer-events:none}.check-button{position:relative}.plant-wrap.level-up svg{animation:sprout .45s ease-out}.particle{position:absolute;pointer-events:none;animation:particle .75s ease-out forwards;font-size:13px}@keyframes particle{from{opacity:1;transform:translate(0,0) scale(.8)}to{opacity:0;transform:translate(var(--dx),-28px) scale(1.3)}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+.check-button.just-toggled{animation:button-bloom .38s ease-out}
+.check-button.just-toggled:after{animation:ripple .55s ease-out}
+.plant-wrap.level-up{animation:plant-glow .52s ease-out}
+.plant-wrap.level-up svg{animation:plant-rise .52s ease-out,plant-wiggle .48s ease-out}
+.plant-wrap.wiggle svg{animation:plant-wiggle .48s ease-out}
+.plant-particle{position:absolute;z-index:2;left:var(--start-x);top:var(--start-y);pointer-events:none;font-size:15px;line-height:1;animation:leaf-drift .52s ease-out forwards;filter:drop-shadow(0 1px 2px rgba(52,76,51,.2))}
+@keyframes button-bloom{0%{transform:scale(.9)}55%{transform:scale(1.09)}100%{transform:scale(1)}}
+@keyframes plant-glow{0%{transform:scale(.88);filter:drop-shadow(0 0 0 transparent)}45%{transform:scale(1.08);filter:drop-shadow(0 0 15px color-mix(in srgb,var(--primary),transparent 30%))}100%{transform:scale(1);filter:drop-shadow(0 0 0 transparent)}}
+@keyframes plant-rise{0%{transform:scale(.82) translateY(4px)}58%{transform:scale(1.07) translateY(-2px)}100%{transform:scale(1) translateY(0)}}
+@keyframes plant-wiggle{0%{rotate:0deg}24%{rotate:-4deg}52%{rotate:3deg}76%{rotate:-1.5deg}100%{rotate:0deg}}
+@keyframes leaf-drift{0%{opacity:0;transform:translate(0,6px) scale(.55) rotate(-12deg)}18%{opacity:1}100%{opacity:0;transform:translate(var(--dx),var(--dy)) scale(1.15) rotate(28deg)}}
