@@ -1,4 +1,4 @@
-# 🌱 Rootine
+# Rootine
 
 **Small habits. Remarkable growth.**
 
