@@ -149,4 +149,4 @@ The ideas on the `/why` page are inspired by *Atomic Habits* by James Clear. All
 
 ## License
 
-MIT. Add a `LICENSE` file if you plan to share or reuse this project.
+MIT © [Aryaman Sharma (aryamaxn)](https://github.com/aryamaxn)
